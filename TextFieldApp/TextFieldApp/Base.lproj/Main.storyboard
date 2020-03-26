@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextFieldApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qv3-i3-Q5b">
+                                <rect key="frame" x="159" y="828" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5CU-Mn-nom">
+                                <rect key="frame" x="159" y="696" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="send" textContentType="email"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWf-fr-Dqc">
+                                <rect key="frame" x="184" y="738" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="displayPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ao0-dc-dCQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5CU-Mn-nom" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="652" id="0Ut-Ra-EnR"/>
+                            <constraint firstItem="5CU-Mn-nom" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="2Jx-Jl-XDH"/>
+                            <constraint firstItem="5CU-Mn-nom" firstAttribute="trailing" secondItem="Qv3-i3-Q5b" secondAttribute="trailing" id="Q7r-r8-vt9"/>
+                            <constraint firstItem="iWf-fr-Dqc" firstAttribute="centerX" secondItem="5CU-Mn-nom" secondAttribute="centerX" id="cRD-WZ-Rhm"/>
+                            <constraint firstItem="5CU-Mn-nom" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ijB-ZG-Reb"/>
+                            <constraint firstItem="Qv3-i3-Q5b" firstAttribute="top" secondItem="5CU-Mn-nom" secondAttribute="bottom" constant="98" id="lPX-yD-gwq"/>
+                            <constraint firstItem="iWf-fr-Dqc" firstAttribute="top" secondItem="5CU-Mn-nom" secondAttribute="bottom" constant="8" id="wTg-jj-Ap3"/>
+                            <constraint firstItem="5CU-Mn-nom" firstAttribute="leading" secondItem="Qv3-i3-Q5b" secondAttribute="leading" id="xuq-1r-F0M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myTextField" destination="5CU-Mn-nom" id="Cho-UL-wXy"/>
+                        <outlet property="passwordTextField" destination="Qv3-i3-Q5b" id="AO8-te-NAx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="101"/>
+        </scene>
+    </scenes>
+</document>
