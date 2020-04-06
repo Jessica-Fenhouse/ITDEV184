@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SliderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pH-ou-acT">
+                                <rect key="frame" x="186" y="306" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="82L-e4-cxD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYI-Xn-tuR">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeSlider:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6v-sl-HOA"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-Ni-k5o">
+                                <rect key="frame" x="81" y="367" width="252" height="30"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="INs-iH-vzz"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1pH-ou-acT" firstAttribute="centerX" secondItem="zQ5-Ni-k5o" secondAttribute="centerX" id="54G-wn-YIB"/>
+                            <constraint firstItem="yYI-Xn-tuR" firstAttribute="top" secondItem="zQ5-Ni-k5o" secondAttribute="bottom" constant="37" id="D0s-ju-FYQ"/>
+                            <constraint firstItem="1pH-ou-acT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Quj-yz-fDw"/>
+                            <constraint firstItem="zQ5-Ni-k5o" firstAttribute="top" secondItem="1pH-ou-acT" secondAttribute="bottom" constant="40" id="UoY-HB-ot9"/>
+                            <constraint firstItem="zQ5-Ni-k5o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="aaN-03-Gk8"/>
+                            <constraint firstItem="1pH-ou-acT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="262" id="cGq-ZR-GoF"/>
+                            <constraint firstItem="zQ5-Ni-k5o" firstAttribute="centerX" secondItem="yYI-Xn-tuR" secondAttribute="centerX" id="nSd-X1-8Xm"/>
+                            <constraint firstItem="yYI-Xn-tuR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s2d-Yq-PDw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelValue" destination="1pH-ou-acT" id="yog-A8-3QE"/>
+                        <outlet property="sliderValue" destination="zQ5-Ni-k5o" id="ln9-0m-aOw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="100.44642857142857"/>
+        </scene>
+    </scenes>
+</document>

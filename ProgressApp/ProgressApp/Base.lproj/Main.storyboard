@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProgressApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fej-CG-c5K">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="runButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Js1-dM-aQk"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gWe-JZ-fzv">
+                                <rect key="frame" x="197" y="377" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFM-Fg-PVC">
+                                <rect key="frame" x="132" y="169" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-0E-QXv">
+                                <rect key="frame" x="160" y="218" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vsc-SU-bPv"/>
+                                </connections>
+                            </stepper>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cin-7k-5Yl">
+                                <rect key="frame" x="132" y="198" width="150" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cFM-Fg-PVC" firstAttribute="trailing" secondItem="Cin-7k-5Yl" secondAttribute="trailing" id="488-bR-hWS"/>
+                            <constraint firstItem="fej-CG-c5K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6D0-fR-42r"/>
+                            <constraint firstItem="cFM-Fg-PVC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="EVC-Vr-nJS"/>
+                            <constraint firstItem="cFM-Fg-PVC" firstAttribute="leading" secondItem="Cin-7k-5Yl" secondAttribute="leading" id="FRb-Oa-Asc"/>
+                            <constraint firstItem="fej-CG-c5K" firstAttribute="top" secondItem="gWe-JZ-fzv" secondAttribute="bottom" constant="36" id="I5Q-Ql-3p2"/>
+                            <constraint firstItem="cjy-0E-QXv" firstAttribute="centerX" secondItem="gWe-JZ-fzv" secondAttribute="centerX" id="INe-WU-YBk"/>
+                            <constraint firstItem="cjy-0E-QXv" firstAttribute="top" secondItem="Cin-7k-5Yl" secondAttribute="bottom" constant="18" id="ZhB-V8-od0"/>
+                            <constraint firstItem="cFM-Fg-PVC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="bTt-9K-xQm"/>
+                            <constraint firstItem="Cin-7k-5Yl" firstAttribute="top" secondItem="cFM-Fg-PVC" secondAttribute="bottom" constant="8" id="k9T-by-1E5"/>
+                            <constraint firstItem="Cin-7k-5Yl" firstAttribute="centerX" secondItem="cjy-0E-QXv" secondAttribute="centerX" id="kpd-zf-FP2"/>
+                            <constraint firstItem="cFM-Fg-PVC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mme-zb-8Ns"/>
+                            <constraint firstItem="gWe-JZ-fzv" firstAttribute="centerX" secondItem="fej-CG-c5K" secondAttribute="centerX" id="spx-Dw-wKF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityView" destination="gWe-JZ-fzv" id="tu0-Qn-UeG"/>
+                        <outlet property="labelProgress" destination="cFM-Fg-PVC" id="y5d-g5-wNi"/>
+                        <outlet property="progressView" destination="Cin-7k-5Yl" id="vIu-qm-hb1"/>
+                        <outlet property="stepperObject" destination="cjy-0E-QXv" id="o1B-nN-Osy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="100.44642857142857"/>
+        </scene>
+    </scenes>
+</document>
